@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>[MY FULL NAME] | IT Graduate, Junior Web Developer, Technical Writer</title>
-<meta name="description" content="Portfolio of an IT graduate from South Africa: web development, technical writing, software testing and IT support.">
+<title>Khanani Hlungwani | IT Graduate, Junior Web Developer, IT Support</title>
+<meta name="description" content="Portfolio of an IT graduate from South Africa with an interest in web development, IT support and software development.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="[MY FULL NAME] | IT Graduate, Junior Web Developer, Technical Writer">
-<meta property="og:description" content="IT graduate from South Africa with practical skills in web development, technical writing, software testing and IT support.">
+<meta property="og:title" content="Khanani Hlungwani | IT Graduate, Junior Web Developer, IT Support">
+<meta property="og:description" content="IT graduate from South Africa with an interest in web development, IT support and software development.">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f6f8;--surface:#fff;--ink:#10242c;--muted:#4b6068;--line:#d5dee3;--accent:#0b6b5f;--accent-ink:#fff;--pop:#2f5bea;--code:#0e1f26;--code-ink:#cfe3ea;
+:root{--bg:#f3f6f8;--surface:#fff;--ink:#10242c;--muted:#4b6068;--line:#d5dee3;--accent:#0b6b5f;--accent-ink:#fff;--pop:#2f5bea;--code:#0e1f26;--code-ink:#cfe3ea;--err:#b42318;
 --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Source Sans 3","Segoe UI",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c171c;--surface:#13242b;--ink:#e6f0f3;--muted:#9bb0b8;--line:#25404a;--accent:#3fc5ae;--accent-ink:#06211c;--pop:#7f9cff;--code:#081217;--code-ink:#cfe3ea}}
-:root[data-theme="dark"]{--bg:#0c171c;--surface:#13242b;--ink:#e6f0f3;--muted:#9bb0b8;--line:#25404a;--accent:#3fc5ae;--accent-ink:#06211c;--pop:#7f9cff;--code:#081217;--code-ink:#cfe3ea}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c171c;--surface:#13242b;--ink:#e6f0f3;--muted:#9bb0b8;--line:#25404a;--accent:#3fc5ae;--accent-ink:#06211c;--pop:#7f9cff;--code:#081217;--code-ink:#cfe3ea;--err:#ff8a80}}
+:root[data-theme="dark"]{--bg:#0c171c;--surface:#13242b;--ink:#e6f0f3;--muted:#9bb0b8;--line:#25404a;--accent:#3fc5ae;--accent-ink:#06211c;--pop:#7f9cff;--code:#081217;--code-ink:#cfe3ea;--err:#ff8a80}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
@@ -90,10 +90,10 @@ dl.facts dd{margin:.1rem 0 0;font-weight:600}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
 /* summary strip */
 .strip{padding:0}
-.strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
 .strip li{padding:1.4rem 1rem;font:700 1.05rem var(--head);text-align:center;border-right:1px solid var(--line)}
 .strip li:last-child{border:0}
-@media (max-width:760px){.strip ul{grid-template-columns:1fr 1fr}.strip li{border-bottom:1px solid var(--line)}.strip li:last-child{grid-column:1/-1;border-bottom:0}}
+@media (max-width:760px){.strip ul{grid-template-columns:1fr 1fr}.strip li{border-bottom:1px solid var(--line)}.strip li:nth-last-child(-n+2){border-bottom:0}.strip li:nth-child(2n){border-right:0}}
 /* skills */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
 .skills h3{font-size:1.15rem;margin-bottom:1rem}
@@ -120,6 +120,7 @@ dl.facts dd{margin:.1rem 0 0;font-weight:600}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
 .card h3{font-size:1.2rem;margin-bottom:.4rem}
 .card p{margin:.3rem 0;color:var(--muted)}
+.card ul.plain{margin:.4rem 0 0;padding-left:1.1rem;color:var(--muted)}
 .meta{font:400 .85rem var(--mono);color:var(--muted)}
 .timeline{border-left:2px solid var(--line);padding-left:1.5rem;display:grid;gap:1.25rem}
 .timeline .card{position:relative}
@@ -131,6 +132,10 @@ label{display:block;font-weight:600;margin-bottom:.3rem}
 input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--muted);border-radius:8px;padding:.7rem .85rem;margin-bottom:1rem}
 textarea{min-height:140px;resize:vertical}
 #status{min-height:1.5rem;color:var(--muted);margin:.75rem 0 0}
+#status.ok{color:var(--accent)}
+#status.err{color:var(--err)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.95rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
@@ -140,16 +145,14 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <a class="skip" href="#main">Skip to content</a>
 <header>
  <div class="wrap nav">
-  <a class="logo" href="#home" data-name>[MY FULL NAME]</a>
+  <a class="logo" href="#home" data-name>Khanani Hlungwani</a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span></button>
   <ul class="menu" id="menu">
    <li><a class="l" href="#home">Home</a></li>
    <li><a class="l" href="#about">About</a></li>
    <li><a class="l" href="#skills">Skills</a></li>
    <li><a class="l" href="#projects">Projects</a></li>
-   <li><a class="l" href="#writing">Technical Writing</a></li>
    <li><a class="l" href="#education">Education</a></li>
-   <li><a class="l" href="#experience">Experience</a></li>
    <li><a class="l" href="#contact">Contact</a></li>
    <li><a class="btn sm" href="#contact">Let's Connect</a></li>
   </ul>
@@ -157,13 +160,13 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 </header>
 
 <main id="main">
-<section class="hero" id="home" style="padding-top:4.5rem">
+<section class="hero" id="home">
  <div class="wrap">
   <div>
-   <h1 data-name>[MY FULL NAME]</h1>
-   <p class="role">IT Graduate | Junior Web Developer | Technical Writer</p>
-   <p class="intro">I build practical web solutions, explore technology through hands-on projects, and create clear technical content that makes complex topics easier to understand.</p>
-   <p class="seeking">Open to junior tech roles, graduate programmes, internships, IT support, junior web development, technical writing and software testing opportunities.</p>
+   <h1 data-name>Khanani Hlungwani</h1>
+   <p class="role">IT Graduate | Junior Web Developer | IT Support</p>
+   <p class="intro">I build practical web solutions, explore technology through hands-on learning, and enjoy solving problems step by step.</p>
+   <p class="seeking">Open to junior web development, IT support and software development opportunities, as well as internships and graduate programmes.</p>
    <div class="cta">
     <a class="btn" href="#projects">View My Projects</a>
     <a class="btn ghost" href="#contact">Contact Me</a>
@@ -179,8 +182,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
   <span class="v">focus</span>: [
     <span class="s">"Web Development"</span>,
     <span class="s">"IT Support"</span>,
-    <span class="s">"Technical Writing"</span>,
-    <span class="s">"Software Testing"</span>
+    <span class="s">"Software Development"</span>
   ],
   <span class="v">level</span>: <span class="s">"Graduate / Junior"</span>,
   <span class="v">learning</span>: <span class="k">true</span>
@@ -193,14 +195,14 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
  <div class="wrap about">
   <div>
    <div class="sec-head"><h2>About Me</h2></div>
-   <p>I am an Information Technology graduate with a strong interest in building practical digital solutions and continuing to grow my technical skills.</p>
-   <p>My background includes IT support, web development, programming, technical writing and software testing. I enjoy learning by building projects and working through real problems rather than only studying theory.</p>
-   <p>I am particularly interested in opportunities where I can continue developing my technical skills while contributing to useful products, services and technology projects.</p>
+   <p>I am a BSc Information Technology graduate from Richfield Graduate Institute of Technology, with a strong interest in building practical digital solutions and continuing to grow my technical skills.</p>
+   <p>I am interested in web development, IT support, software development and learning new technologies. I enjoy learning by building and working through real problems rather than only studying theory.</p>
+   <p>I am looking for opportunities where I can keep developing my technical skills while contributing to useful products, services and technology projects.</p>
   </div>
   <aside class="card" aria-label="Profile summary">
    <dl class="facts">
-    <div><dt>Education</dt><dd>BSc Information Technology</dd></div>
-    <div><dt>Focus</dt><dd>Web Development, IT Support, Technical Writing &amp; Software Testing</dd></div>
+    <div><dt>Education</dt><dd>BSc Information Technology, Richfield Graduate Institute of Technology</dd></div>
+    <div><dt>Focus</dt><dd>Web Development, IT Support &amp; Software Development</dd></div>
     <div><dt>Location</dt><dd>South Africa</dd></div>
     <div><dt>Career Level</dt><dd>Graduate / Junior</dd></div>
    </dl>
@@ -209,7 +211,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 </section>
 
 <section class="strip" aria-label="Professional summary">
- <div class="wrap"><ul><li>BSc IT Graduate</li><li>Web Development</li><li>Technical Writing</li><li>Software Testing</li><li>IT Support</li></ul></div>
+ <div class="wrap"><ul><li>BSc IT Graduate</li><li>Web Development</li><li>IT Support</li><li>Software Development</li></ul></div>
 </section>
 
 <section id="skills">
@@ -222,105 +224,82 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 
 <section id="projects">
  <div class="wrap">
-  <div class="sec-head"><h2>Featured Projects</h2><p>A selection of practical projects demonstrating my technical skills and problem-solving approach.</p></div>
-  <div class="projects" id="projgrid"></div>
+  <div class="sec-head"><h2>Featured Projects</h2></div>
+  <div class="card"><p>Projects coming soon. I am currently building practical projects to improve my development skills and gain hands-on experience.</p></div>
  </div>
 </section>
-
-<section id="writing">
- <div class="wrap">
-  <div class="sec-head"><h2>Technical Writing</h2><p>Writing samples that explain technical topics in plain language.</p></div>
-  <div class="grid2" id="writegrid"></div>
- </div>
-</section>
-
 <section id="education">
  <div class="wrap">
   <div class="sec-head"><h2>Education</h2></div>
   <div class="timeline">
    <div class="card">
     <h3>BSc Information Technology</h3>
-    <p class="meta">[INSTITUTION NAME] | [START YEAR] to [GRADUATION YEAR]</p>
-    <p>[Relevant modules, final-year project or academic highlights to add]</p>
+    <p class="meta">Richfield Graduate Institute of Technology | 2025</p>
    </div>
    <div class="card">
-    <h3>Certifications and short courses</h3>
-    <p class="meta">[Add only those you have completed]</p>
-    <p>[CERTIFICATE NAME] | [ISSUER] | [YEAR]</p>
+    <h3>Diploma in Information Technology</h3>
+    <p class="meta">2023 | Cum Laude</p>
+   </div>
+   <div class="card">
+    <h3>NQF Level 4 Technical Support</h3>
+    <p class="meta">2020</p>
+   </div>
+   <div class="card">
+    <h3>Certifications and Achievements</h3>
+    <ul class="plain">
+     <li>SheCodes Basic</li>
+     <li>SheCodes Plus</li>
+     <li>SheCodes Responsive Web Development</li>
+     <li>SheCodes React Development</li>
+     <li>Certificate of Academic Achievement (Top Student, Semester 1, 2023)</li>
+    </ul>
    </div>
   </div>
  </div>
 </section>
-
-<section id="experience">
- <div class="wrap">
-  <div class="sec-head"><h2>Experience</h2><p>Add internships, volunteer work, freelance work, practical placements or academic work that involved IT support, testing, development or writing.</p></div>
-  <div class="timeline">
-   <div class="card">
-    <h3>[ROLE TITLE]</h3>
-    <p class="meta">[ORGANISATION] | [START] to [END] | [Internship / Volunteer / Academic / Freelance]</p>
-    <p>[What you did, in one or two plain sentences]</p>
-    <p>[A task you handled, a problem you solved, or something you learned]</p>
-   </div>
-  </div>
- </div>
-</section>
-
 <section id="contact">
  <div class="wrap contact">
   <div>
-   <div class="sec-head" style="margin-bottom:0"><h2>Let's Connect</h2><p>I am open to junior tech roles, graduate programmes, internships, IT support, junior web development, technical writing and software testing opportunities.</p></div>
+   <div class="sec-head" style="margin-bottom:0"><h2>Let's Connect</h2><p>I am open to junior web development, IT support and software development opportunities, as well as internships and graduate programmes.</p></div>
    <ul id="contactlinks"></ul>
   </div>
   <form id="form" class="card" novalidate>
    <label for="n">Your name</label><input id="n" name="name" autocomplete="name" required>
    <label for="e">Your email</label><input id="e" name="email" type="email" autocomplete="email" required>
    <label for="m">Message</label><textarea id="m" name="message" required></textarea>
-   <button class="btn" type="submit">Open in my email app</button>
+   <div class="hp" aria-hidden="true"><label for="hp">Leave this field empty</label><input id="hp" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+   <button class="btn" type="submit">Send message</button>
    <p id="status" role="status"></p>
   </form>
  </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span data-name>[MY FULL NAME]</span> | IT Graduate | South Africa</div></footer>
+<footer><div class="wrap"><span data-name>Khanani Hlungwani</span> | IT Graduate | South Africa</div></footer>
 
 <script>
-/* ===== EDIT THIS BLOCK: replace placeholders with your real details ===== */
+/* ===== EDIT THIS BLOCK: your details ===== */
 const CONFIG = {
-  name: "[MY FULL NAME]",
-  github: "",   // e.g. "https://github.com/yourname"
-  linkedin: "",  // e.g. "https://www.linkedin.com/in/yourname"
-  email: "",     // e.g. "you@example.com"
+  name: "Khanani Hlungwani",
+  github: "https://github.com/Khanani3",
+  linkedin: "https://www.linkedin.com/in/khanani-hlungwani-a02bb31ba",
+  email: "khanientshaho@gmail.com",
+  formEndpoint: "",   // from your form service, e.g. "https://formspree.io/f/xxxxxxxx" or "https://api.web3forms.com/submit"
+  formAccessKey: "",  // only needed for Web3Forms; leave empty for Formspree
   cv: "",        // e.g. "cv/my-name-cv.pdf" or a link to your PDF CV
   skills: {
-    "Web Development": ["HTML5","CSS3","JavaScript","React"],
-    "Programming": ["Java","C#"],
-    "IT & Technical Support": ["Technical Support","Troubleshooting","Basic Cybersecurity","Computer/Software Troubleshooting"],
-    "Testing": ["Website Testing","Usability Testing","User Experience Feedback","Software Testing","Bug Reporting"],
-    "Writing & Research": ["Technical Writing","Content Writing","Web Research","Documentation","Simplifying Technical Information"],
-    "Tools": ["Git","GitHub","VS Code"]
+    "Web Development": ["HTML","CSS","JavaScript/ES6","React","Bootstrap","API integration","Responsive web development","SEO"],
+    "Programming & Databases": ["PHP","C++","Java","MySQL"],
+    "Tools & Deployment": ["Git","GitHub","Netlify"],
+    "Professional Skills": ["Problem solving","Analytical thinking","Attention to detail","Teamwork","Collaboration","Willingness to learn"]
   },
-  // Optional honest levels: "Familiar", "Working Knowledge" or "Beginner". Leave out to show no level.
-  levels: { /* "HTML5": "Working Knowledge" */ },
-  projects: [1,2,3].map(i => ({
-    title: "[PROJECT " + i + " TITLE]",
-    image: "",          // path or data URL of a real screenshot
-    description: "[One or two sentences: what the project does and the problem it solves]",
-    tech: ["[Technology]","[Technology]","[Technology]"],
-    features: ["[Key feature]","[Key feature]","[Key feature]"],
-    github: "", demo: "", caseStudy: ""  // caseStudy: add a URL to show the Case Study button; leave empty to hide it
-  })),
-  writing: [1,2].map(i => ({
-    title: "[WRITING SAMPLE " + i + " TITLE]",
-    type: "[Article / Guide / Documentation / Blog post]",
-    summary: "[One sentence on the topic and who it is written for]",
-    link: ""
-  }))
+  // Optional honest levels: "Familiar", "Working Knowledge" or "Beginner". Leave empty to show no level.
+  levels: { /* "HTML": "Working Knowledge" */ }
 };
-/* ======================================================================= */
+/* ======================================= */
 const $ = s => document.querySelector(s);
 const el = (t, props = {}, kids = []) => { const e = Object.assign(document.createElement(t), props); kids.forEach(k => e.append(k)); return e; };
+const placeholder = (txt) => el("span", { className: "btn sm", textContent: txt }, []);
 function linkBtn(label, url, primary) {
   if (url) return el("a", { className: "btn sm" + (primary ? "" : " ghost"), href: url, target: "_blank", rel: "noopener noreferrer", textContent: label });
   const b = el("span", { className: "btn sm", textContent: label + " [URL pending]" });
@@ -329,7 +308,7 @@ function linkBtn(label, url, primary) {
 document.querySelectorAll("[data-name]").forEach(n => n.textContent = CONFIG.name);
 
 /* page title, share preview and CV button */
-document.title = CONFIG.name + " | IT Graduate, Junior Web Developer, Technical Writer";
+document.title = CONFIG.name + " | IT Graduate, Junior Web Developer, IT Support";
 document.querySelector('meta[property="og:title"]').content = document.title;
 const cvEl = linkBtn("Download CV", CONFIG.cv, false);
 cvEl.classList.remove("sm"); cvEl.classList.add("ghost");
@@ -357,29 +336,6 @@ Object.entries(CONFIG.skills).forEach(([group, items]) => {
 });
 if (Object.keys(CONFIG.levels).length) $("#legend").style.display = "block";
 
-/* projects */
-const pg = $("#projgrid");
-CONFIG.projects.forEach(p => {
-  const shot = el("div", { className: "shot" });
-  if (p.image) shot.append(el("img", { src: p.image, alt: "Screenshot of " + p.title, loading: "lazy" }));
-  else shot.append(el("span", { textContent: "[Project screenshot placeholder]" }));
-  const tags = el("ul", { className: "tags" }); p.tech.forEach(t => tags.append(el("li", { className: "tag", textContent: t })));
-  const feats = el("ul", { className: "feat" }); p.features.forEach(f => feats.append(el("li", { textContent: f })));
-  const acts = el("div", { className: "acts" }, [linkBtn("GitHub", p.github, true), linkBtn("Live Demo", p.demo, true)]);
-  if (p.caseStudy) acts.append(linkBtn("Case Study", p.caseStudy, false));
-  pg.append(el("article", { className: "card proj" }, [shot, el("div", { className: "body" }, [
-    el("h3", { textContent: p.title }), el("p", { textContent: p.description }),
-    el("div", {}, [el("h4", { textContent: "Technologies" }), tags]),
-    el("div", {}, [el("h4", { textContent: "Key features" }), feats]), acts])]));
-});
-
-/* writing */
-CONFIG.writing.forEach(w => {
-  const c = el("article", { className: "card" }, [el("p", { className: "meta", textContent: w.type }), el("h3", { textContent: w.title }), el("p", { textContent: w.summary })]);
-  c.append(el("div", { style: "margin-top:1rem" }, [linkBtn("Read sample", w.link, false)]));
-  $("#writegrid").append(c);
-});
-
 /* menu */
 const burger = $("#burger"), menu = $("#menu");
 const setMenu = open => { menu.classList.toggle("open", open); burger.setAttribute("aria-expanded", open); };
@@ -388,21 +344,31 @@ menu.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false);
 document.addEventListener("keydown", e => { if (e.key === "Escape") { setMenu(false); burger.focus(); } });
 
 /* active link */
-const ids = ["home","about","skills","projects","writing","education","experience","contact"];
+const ids = ["home","about","skills","projects","education","contact"];
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) menu.querySelectorAll("a.l").forEach(a => a.toggleAttribute("aria-current", a.getAttribute("href") === "#" + e.target.id) || a.removeAttribute("aria-current"));
 }), { rootMargin: "-40% 0px -55% 0px" });
 ids.forEach(i => { const s = document.getElementById(i); s && io.observe(s); });
 
-/* contact form: opens the visitor's email app, no server needed */
-$("#form").addEventListener("submit", e => {
+/* contact form: posts to your form service, which emails the message to your inbox */
+$("#form").addEventListener("submit", async e => {
   e.preventDefault();
-  const f = e.target, s = $("#status");
-  if (!f.name.value.trim() || !f.email.validity.valid || !f.message.value.trim()) { s.textContent = "Please enter your name, a valid email address and a message."; return; }
-  if (!CONFIG.email) { s.textContent = "The email address has not been added yet. Set it in CONFIG.email."; return; }
-  const body = encodeURIComponent(f.message.value + "\n\nFrom: " + f.name.value + " (" + f.email.value + ")");
-  location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Portfolio enquiry from " + f.name.value) + "&body=" + body;
-  s.textContent = "Opening your email app. If nothing happens, email me directly.";
+  const f = e.target, s = $("#status"), btn = f.querySelector("button[type=submit]"), d = new FormData(f);
+  s.className = "";
+  if (d.get("_gotcha")) return; /* spam trap */
+  if (!d.get("name").trim() || !f.email.validity.valid || !d.get("message").trim()) { s.textContent = "Please enter your name, a valid email address and a message."; s.className = "err"; return; }
+  if (!CONFIG.formEndpoint) { s.textContent = "The contact form is not connected yet. Add your form service address to CONFIG.formEndpoint."; s.className = "err"; return; }
+  if (CONFIG.formAccessKey) d.append("access_key", CONFIG.formAccessKey);
+  d.append("subject", "Portfolio enquiry from " + d.get("name"));
+  btn.disabled = true; btn.textContent = "Sending...";
+  try {
+    const res = await fetch(CONFIG.formEndpoint, { method: "POST", body: d, headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error("Request failed");
+    f.reset(); s.textContent = "Thank you. Your message has been sent."; s.className = "ok";
+  } catch (err) {
+    s.textContent = "Your message could not be sent. Please try again" + (CONFIG.email ? " or email " + CONFIG.email + "." : ".");
+    s.className = "err";
+  } finally { btn.disabled = false; btn.textContent = "Send message"; }
 });
 </script>
 </body>
